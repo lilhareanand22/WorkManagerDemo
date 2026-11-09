@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Data extraction rules — governs cloud backup (Android 12+) and device-to-device
+  transfer for this app. Referenced via android:dataExtractionRules in AndroidManifest.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Exclude WorkManager's transient internal database from cloud backup. -->
+        <exclude domain="database" path="androidx.work.workdb" />
+        <exclude domain="database" path="androidx.work.workdb-shm" />
+        <exclude domain="database" path="androidx.work.workdb-wal" />
+    </cloud-backup>
+
+    <device-transfer>
+        <!-- WorkManager internal state is not meaningful on a new device. -->
+        <exclude domain="database" path="androidx.work.workdb" />
+    </device-transfer>
+</data-extraction-rules>

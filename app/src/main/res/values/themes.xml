@@ -1,0 +1,7 @@
+<resources>
+    <!-- Base application theme — Compose apps typically use a minimal XML theme
+         that sets the window background and delegates all other styling to Compose. -->
+    <style name="Theme.WorkManagerDemo" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>

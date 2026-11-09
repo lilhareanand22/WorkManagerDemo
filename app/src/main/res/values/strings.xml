@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WorkManager Demo</string>
+
+    <!-- Notification channel labels -->
+    <string name="channel_foreground_work_name">Background Processing</string>
+    <string name="channel_general_work_name">Work Status</string>
+
+    <!-- Notification content -->
+    <string name="notification_video_export_title">Exporting Video…</string>
+    <string name="notification_video_export_cancel">Cancel</string>
+    <string name="notification_work_complete_title">Background work complete</string>
+    <string name="notification_work_failed_title">Background work failed</string>
+</resources>

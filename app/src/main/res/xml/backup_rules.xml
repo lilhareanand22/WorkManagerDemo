@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Backup rules file — controls which files are backed up by Android Auto Backup.
+  Sensitive WorkManager internal DB files and user data are excluded.
+  Referenced in AndroidManifest.xml via android:fullBackupContent.
+-->
+<full-backup-content>
+    <!-- Exclude WorkManager's internal SQLite database from cloud backup,
+         as it contains work-request states that are transient and may become
+         stale after a restore to a new device or OS version. -->
+    <exclude domain="database" path="androidx.work.workdb" />
+    <exclude domain="database" path="androidx.work.workdb-shm" />
+    <exclude domain="database" path="androidx.work.workdb-wal" />
+</full-backup-content>
