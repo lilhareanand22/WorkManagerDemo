@@ -46,6 +46,11 @@ object WorkerConstants {
     const val KEY_OUTPUT_SIZE_BYTES   = "key_output_size_bytes"
     const val KEY_COMPRESSION_RATIO   = "key_compression_ratio"
 
+    // DailyCleanupWorker output keys
+    const val KEY_FILES_DELETED_COUNT = "key_files_deleted_count"
+    const val KEY_BYTES_RECLAIMED     = "key_bytes_reclaimed"
+    const val KEY_CLEANUP_TIMESTAMP   = "key_cleanup_timestamp"
+
     // DownloadWorker output key (passed into CombineAndUploadWorker)
     const val KEY_DOWNLOADED_FILE_URI = "key_downloaded_file_uri"
 
