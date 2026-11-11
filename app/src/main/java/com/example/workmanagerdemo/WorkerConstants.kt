@@ -65,6 +65,9 @@ object WorkerConstants {
 
     // AnalyticsSyncWorker input keys
     const val KEY_ANALYTICS_BATCH_ID  = "key_analytics_batch_id"
+    const val KEY_EVENTS_COUNT        = "key_events_count"
+    const val KEY_ATTEMPT_COUNT       = "key_attempt_count"
+    const val KEY_RETRY_BACKOFF_ACTIVE = "key_retry_backoff_active"
 
     // VideoExportWorker input keys
     const val KEY_EXPORT_FORMAT       = "key_export_format"
