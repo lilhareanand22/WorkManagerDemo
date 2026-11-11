@@ -69,4 +69,10 @@ sealed class WorkManagerScreen(val route: String, val title: String, val emoji: 
         title = "Long-Running Foreground Work",
         emoji = "🎬"
     )
+
+    data object InterviewQuestions : WorkManagerScreen(
+        route = "interview_questions",
+        title = "Top 20 Interview Questions & Answers",
+        emoji = "🎓"
+    )
 }
