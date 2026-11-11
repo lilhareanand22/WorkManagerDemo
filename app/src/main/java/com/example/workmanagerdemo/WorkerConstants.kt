@@ -67,6 +67,13 @@ object WorkerConstants {
     const val KEY_EXPORT_FORMAT       = "key_export_format"
     const val KEY_EXPORT_QUALITY      = "key_export_quality"
 
+    // CriticalAlertWorker input/output keys
+    const val KEY_ALERT_TITLE         = "key_alert_title"
+    const val KEY_ALERT_MESSAGE       = "key_alert_message"
+    const val KEY_ALERT_SEVERITY      = "key_alert_severity"
+    const val KEY_DISPATCH_TIMESTAMP  = "key_dispatch_timestamp"
+    const val KEY_EXECUTION_LATENCY_MS = "key_execution_latency_ms"
+
     // ── Progress Keys ────────────────────────────────────────────────────────
     // Used with setProgress() / setProgressAsync() inside running Workers,
     // and read via workInfo.progress in the Compose UI.
@@ -80,6 +87,7 @@ object WorkerConstants {
 
     const val NOTIFICATION_ID_VIDEO_EXPORT    = 1001
     const val NOTIFICATION_ID_GENERAL_WORK   = 1002
+    const val NOTIFICATION_ID_EXPEDITED_ALERT = 1003
 
     // ── Default Values ───────────────────────────────────────────────────────
 
