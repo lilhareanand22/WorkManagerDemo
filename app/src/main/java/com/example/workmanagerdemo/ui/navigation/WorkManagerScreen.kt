@@ -70,6 +70,12 @@ sealed class WorkManagerScreen(val route: String, val title: String, val emoji: 
         emoji = "🎬"
     )
 
+    data object CustomFactory : WorkManagerScreen(
+        route = "custom_factory",
+        title = "WorkerFactory & Hilt DI",
+        emoji = "💉"
+    )
+
     data object InterviewQuestions : WorkManagerScreen(
         route = "interview_questions",
         title = "Top 20 Interview Questions & Answers",

@@ -22,6 +22,7 @@ object WorkerConstants {
     const val TAG_COMBINE_UPLOAD     = "tag_combine_upload"
     const val TAG_ANALYTICS_SYNC     = "tag_analytics_sync"
     const val TAG_VIDEO_EXPORT       = "tag_video_export"
+    const val TAG_USER_SYNC          = "tag_user_sync"
 
     // ── Unique Work Names ────────────────────────────────────────────────────
     // Used with enqueueUniqueWork / enqueueUniquePeriodicWork to prevent
@@ -32,6 +33,7 @@ object WorkerConstants {
     const val UNIQUE_IMAGE_COMPRESS       = "unique_image_compress"
     const val UNIQUE_CHAINED_PIPELINE     = "unique_chained_pipeline"
     const val UNIQUE_VIDEO_EXPORT         = "unique_video_export"
+    const val UNIQUE_USER_SYNC            = "unique_user_sync"
 
     // ── Input / Output Data Keys ─────────────────────────────────────────────
     // These string keys form the Data contract between enqueuing code and
@@ -82,6 +84,10 @@ object WorkerConstants {
     const val KEY_ALERT_SEVERITY      = "key_alert_severity"
     const val KEY_DISPATCH_TIMESTAMP  = "key_dispatch_timestamp"
     const val KEY_EXECUTION_LATENCY_MS = "key_execution_latency_ms"
+
+    // UserRepositorySyncWorker keys
+    const val KEY_SYNCED_USER_ID      = "key_synced_user_id"
+    const val KEY_RECORDS_UPDATED     = "key_records_updated"
 
     // ── Progress Keys ────────────────────────────────────────────────────────
     // Used with setProgress() / setProgressAsync() inside running Workers,

@@ -83,6 +83,12 @@ fun WorkManagerNavHost(
             )
         }
 
+        composable(WorkManagerScreen.CustomFactory.route) {
+            com.example.workmanagerdemo.ui.screens.customfactory.CustomFactoryScreen(
+                onNavigateBack = { navController.popBackStack() }
+            )
+        }
+
         composable(WorkManagerScreen.InterviewQuestions.route) {
             com.example.workmanagerdemo.ui.screens.interview.InterviewQuestionsScreen(
                 onNavigateBack = { navController.popBackStack() }

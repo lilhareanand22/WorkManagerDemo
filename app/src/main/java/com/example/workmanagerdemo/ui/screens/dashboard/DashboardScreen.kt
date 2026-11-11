@@ -51,7 +51,8 @@ fun DashboardScreen(
         WorkManagerScreen.ExpeditedWork,
         WorkManagerScreen.ChainedWork,
         WorkManagerScreen.UniqueWork,
-        WorkManagerScreen.ForegroundWork
+        WorkManagerScreen.ForegroundWork,
+        WorkManagerScreen.CustomFactory
     )
 
     Scaffold(
@@ -300,7 +301,8 @@ private fun DemoCard(
         WorkManagerScreen.ExpeditedWork.route to "Immediate priority execution, OutOfQuotaPolicy, and API < 31 fallback.",
         WorkManagerScreen.ChainedWork.route to "Parallel DAG fork & join with OverwritingInputMerger & failure propagation.",
         WorkManagerScreen.UniqueWork.route to "Conflict policies (KEEP, REPLACE, APPEND) & exponential backoff retry math.",
-        WorkManagerScreen.ForegroundWork.route to "Bypassing 10-minute timeout via setForeground() & notification cancel action."
+        WorkManagerScreen.ForegroundWork.route to "Bypassing 10-minute timeout via setForeground() & notification cancel action.",
+        WorkManagerScreen.CustomFactory.route to "Constructor Dependency Injection via @HiltWorker and manual WorkerFactory."
     )
 
     Card(
@@ -376,5 +378,6 @@ private fun WorkManagerScreen.toWorkerTag(): String? = when (this) {
     WorkManagerScreen.ChainedWork -> WorkerConstants.TAG_COMBINE_UPLOAD
     WorkManagerScreen.UniqueWork -> WorkerConstants.TAG_ANALYTICS_SYNC
     WorkManagerScreen.ForegroundWork -> WorkerConstants.TAG_VIDEO_EXPORT
+    WorkManagerScreen.CustomFactory -> WorkerConstants.TAG_USER_SYNC
     else -> null
 }
