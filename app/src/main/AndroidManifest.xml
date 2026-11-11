@@ -18,7 +18,7 @@
     <!-- when setForeground(ForegroundInfo) is called.                        -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
-    <!-- Required by: VideoExportWorker specifically (uses mediaProcessing     -->
+    <!-- Required by: VideoExportWorker specifically (uses dataSync           -->
     <!-- foreground service type, introduced in Android 14 / API 34).         -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
 
@@ -61,6 +61,14 @@
                 android:value="androidx.startup"
                 tools:node="remove" />
         </provider>
+
+        <!-- ── WorkManager SystemForegroundService ────────────────────────── -->
+        <!-- Required on Android 14+ (API 34+) when calling setForeground()     -->
+        <!-- with a specific Foreground Service type (e.g. dataSync).          -->
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="dataSync"
+            tools:node="merge" />
 
     </application>
 

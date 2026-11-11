@@ -31,6 +31,7 @@ object WorkerConstants {
     const val UNIQUE_PERIODIC_CLEANUP     = "unique_periodic_cleanup"
     const val UNIQUE_IMAGE_COMPRESS       = "unique_image_compress"
     const val UNIQUE_CHAINED_PIPELINE     = "unique_chained_pipeline"
+    const val UNIQUE_VIDEO_EXPORT         = "unique_video_export"
 
     // ── Input / Output Data Keys ─────────────────────────────────────────────
     // These string keys form the Data contract between enqueuing code and
@@ -70,8 +71,10 @@ object WorkerConstants {
     const val KEY_RETRY_BACKOFF_ACTIVE = "key_retry_backoff_active"
 
     // VideoExportWorker input keys
+    const val KEY_VIDEO_TITLE         = "key_video_title"
     const val KEY_EXPORT_FORMAT       = "key_export_format"
     const val KEY_EXPORT_QUALITY      = "key_export_quality"
+    const val KEY_OUTPUT_DURATION     = "key_output_duration"
 
     // CriticalAlertWorker input/output keys
     const val KEY_ALERT_TITLE         = "key_alert_title"
