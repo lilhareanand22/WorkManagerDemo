@@ -30,6 +30,7 @@ object WorkerConstants {
     const val UNIQUE_WORK_ANALYTICS_SYNC  = "unique_analytics_sync"
     const val UNIQUE_PERIODIC_CLEANUP     = "unique_periodic_cleanup"
     const val UNIQUE_IMAGE_COMPRESS       = "unique_image_compress"
+    const val UNIQUE_CHAINED_PIPELINE     = "unique_chained_pipeline"
 
     // ── Input / Output Data Keys ─────────────────────────────────────────────
     // These string keys form the Data contract between enqueuing code and
@@ -53,9 +54,11 @@ object WorkerConstants {
 
     // DownloadWorker output key (passed into CombineAndUploadWorker)
     const val KEY_DOWNLOADED_FILE_URI = "key_downloaded_file_uri"
+    const val KEY_SIMULATE_FAILURE    = "key_simulate_failure"
 
     // FilterWorker output key (passed into CombineAndUploadWorker)
     const val KEY_FILTERED_DATA       = "key_filtered_data"
+    const val KEY_RECORDS_PROCESSED   = "key_records_processed"
 
     // CombineAndUploadWorker output key
     const val KEY_UPLOAD_URL          = "key_upload_url"
